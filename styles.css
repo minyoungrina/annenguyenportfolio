@@ -1,0 +1,208 @@
+/* General Body Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #FFFFFF; /* white background */
+    color: #313736; /* Dark grey for general text */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #F0C146; /* Golden background to match the theme */
+    color: #FFF;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Adjusting body padding to accommodate the fixed navbar */
+body {
+    padding-top: 60px;
+}
+
+
+/* Google Fonts */
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800; /* Extra Bold Weight */
+    color: #000000;
+}
+
+p {
+    font-family: 'Questrial', sans-serif; /* Specific font for paragraphs */
+    letter-spacing: 3px;
+}
+
+/* Section Styling */
+.intro-section {
+    display: flex;
+    height: 100vh; /* Full view height */
+}
+
+.left-panel {
+    flex: 1; /* Equal division of space */
+    display: flex;
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+    background-color: #FFFFFF; /* white background for left panel */
+}
+
+.left-panel img {
+    max-width: 90%; /* Smaller image size */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.right-panel {
+    flex: 1; /* Equal division of space */
+    background: #F0C146; /* golden background for right panel */
+    display: flex;
+    align-items: center; /* Aligns content vertically to center */
+    justify-content: center; /* Aligns content horizontally to center */
+    padding: 40px; /* Padding for spacing around text */
+}
+
+.text-content h1 {
+    font-size: 70px; /* Larger size for the title */
+    margin-bottom: 40px; /* Space between title and paragraph */
+}
+
+.text-content p {
+    font-size: 18px; /* Consistent font size for readability */
+    line-height: 1.6;
+    color: #66602A; /* Stylistic color choice for better readability */
+    margin-top: 8px; /* Adds a little space above each paragraph */
+    margin-bottom: 8px; /* Adds a little space below each paragraph */
+}
+
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio-gallery img {
+    max-width: 300px; /* Display smaller versions of images */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.contact-panel {
+    flex: 1; /* Equal division of space */
+    background: #F0C146; /* golden background */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns content vertically to center */
+    justify-content: center; /* Aligns content horizontally to center */
+    padding: 40px; /* Padding for spacing around text */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.interactive-art-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.interactive-art {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.interactive-art figure {
+    width: 45%; /* Maintaining a consistent width for each figure */
+    margin: 10px;
+    text-align: center; /* Centers the caption text under the image */
+}
+
+.interactive-art a {
+    display: block;
+    width: 100%; /* Ensure link occupies the entire figure width */
+}
+
+.interactive-art img {
+    width: 100%; /* Makes the image fill the figure width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners for aesthetics */
+}
+
+figcaption {
+    margin-top: 8px; /* Space between image and caption */
+    font-size: 16px; /* Appropriate font size for captions */
+    color: #666; /* Subtle color for captions */
+}
+
+/* Ensuring hover effect does not alter size */
+.interactive-art img:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .intro-section, .portfolio-section, .contact-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel, .right-panel, .contact-panel {
+        flex: none;
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .left-panel img, .portfolio-gallery img {
+        max-width: 80%; /* Larger image size for better mobile visibility */
+    }
+
+    .portfolio-gallery {
+        flex-direction: column;
+    }
+}
